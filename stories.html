@@ -5,11 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stories - ATURE</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-05JBRYXGST"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-05JBRYXGST');
+    </script>
+    <!-- AddToAny for Social Sharing -->
+    <script src="//static.addtoany.com/menu/page.js"></script>
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">ATURE</div>
+            <div class="logo">
+                <img src="https://raw.githubusercontent.com/linhday22/ATUREWebfile/main/ATURE.png" alt="ATURE Logo">
+            </div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="stories.html">Stories</a></li>
@@ -24,21 +36,43 @@
             <h1>From the Storybook</h1>
             <p>Echoes from kitchens, fields, and family memory—unedited</p>
         </section>
+        <section class="filters">
+            <h2>Explore by Category</h2>
+            <div class="filter-buttons">
+                <button>Culinary Memory</button>
+                <button>Objects + Craft</button>
+                <button>Rituals + Traditions</button>
+                <button>Migration + Diaspora</button>
+                <button>Silent Inheritance</button>
+            </div>
+            <p><em>Note:</em> Filters are placeholders. Stories are currently displayed as a grid below.</p>
+        </section>
         <section class="story-grid">
             <div class="story-card">
                 <h3>A Memory of Phở</h3>
-                <p>My grandmother’s phở recipe has been passed down for generations...</p>
+                <p>In a small kitchen in Hanoi, the aroma of simmering phở broth filled the air, a recipe whispered through generations. Every Sunday, my grandmother would gather us around, her hands deftly slicing herbs, her laughter seasoning the broth as much as the star anise...</p>
+                <p><strong>Story Weaver:</strong> Minh Tran</p>
+                <p><strong>Category:</strong> Culinary Memory</p>
                 <a href="#">Read Chapter</a>
             </div>
             <div class="story-card">
                 <h3>The Lantern Festival</h3>
-                <p>Every Mid-Autumn Festival, our village lights up with lanterns...</p>
+                <p>Under the full moon of the Mid-Autumn Festival, a village in Hue glowed with the light of handcrafted lanterns. My father taught me to shape bamboo frames, whispering tales of our ancestors as we worked, the glow of the lanterns reflecting the warmth of our shared history...</p>
+                <p><strong>Story Weaver:</strong> Anh Nguyen</p>
+                <p><strong>Category:</strong> Rituals + Traditions</p>
+                <a href="#">Read Chapter</a>
+            </div>
+            <div class="story-card">
+                <h3>Silent Inheritance</h3>
+                <p>A faded photograph, a recipe for bánh chưng, and a story of resilience passed down through a family in the Mekong Delta. My mother’s hands trembled as she folded the sticky rice, her voice steady as she spoke of surviving the floods of 1978...</p>
+                <p><strong>Story Weaver:</strong> Lan Pham</p>
+                <p><strong>Category:</strong> Silent Inheritance</p>
                 <a href="#">Read Chapter</a>
             </div>
         </section>
         <section class="cta">
             <p>What did you inherit, silently? Share your chapter.</p>
-            <button onclick="location.href='share.html'">Share Your Chapter</button>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScj62GwtPh0qJF2t-L7DvZFeQTpmRi3m8UDmiwTnkvSu31fFQ/viewform?usp=dialog" target="_blank" class="cta-button">Share Your Chapter</a>
         </section>
     </main>
     <footer>
@@ -46,7 +80,10 @@
             <a href="index.html">Home</a> | <a href="stories.html">Stories</a> | <a href="recipes.html">Recipes</a> | <a href="share.html">Share Your Chapter</a> | <a href="about.html">About</a>
         </div>
         <div class="social-links">
-            <a href="https://tiktok.com" target="_blank">TikTok</a> | <a href="https://instagram.com" target="_blank">Instagram</a> | <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://www.tiktok.com/@ature_here" target="_blank">TikTok</a> | 
+            <a href="https://www.instagram.com/ature_here" target="_blank">Instagram</a> | 
+            <a href="https://www.facebook.com/profile.php?id=61574186884655" target="_blank">Facebook</a> | 
+            <a href="https://www.linkedin.com/company/106546634" target="_blank">LinkedIn</a>
         </div>
         <p>© 2025 ATURE | <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
     </footer>
