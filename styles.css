@@ -1,18 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Inter:wght@400;500&family=Dancing+Script&display=swap');
+
+:root {
+    --primary-color: #4A0E4E;
+    --accent-color: #FFD700;
+    --secondary-accent: #FF6F61;
+    --text-color: #333333;
+    --background-color: #FFFFFF;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #F3EDE2; /* Rice Paper Beige */
-    color: #2E2B5F; /* Midnight Indigo */
+    color: var(--text-color);
+    background-color: var(--background-color);
 }
+
 header {
-    background-color: #556B2F; /* Deep Bamboo Green */
-    padding: 1rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-accent));
+    padding: 1.5rem;
     position: sticky;
     top: 0;
     z-index: 100;
 }
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -20,167 +32,283 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 .logo img {
-    height: 30px; /* Reduced from 40px to 30px for better fit */
+    height: 40px;
 }
+
 nav ul {
     list-style: none;
     display: flex;
-    gap: 1rem;
-    margin: 0;
-    padding: 0;
+    gap: 1.5rem;
 }
+
 nav a {
     text-decoration: none;
-    color: #F3EDE2; /* Rice Paper Beige */
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2rem;
+    color: #FFF;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
 }
+
 nav a:hover {
-    color: #D45D42; /* Heritage Terracotta */
+    color: var(--accent-color);
 }
+
 .hero {
     text-align: center;
-    padding: 2rem;
-    background-color: #F3EDE2; /* Rice Paper Beige */
+    padding: 4rem 1rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-accent));
+    color: #FFF;
 }
+
 .hero h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    color: #556B2F; /* Deep Bamboo Green */
-}
-.hero p {
-    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
     margin-bottom: 1rem;
 }
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero img {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+
 .hero button {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    background-color: #D45D42; /* Heritage Terracotta */
-    color: #F3EDE2; /* Rice Paper Beige */
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
     border: none;
+    border-radius: 30px;
     cursor: pointer;
-    margin: 0 0.5rem;
-    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
 .hero button:hover {
-    background-color: #2E2B5F; /* Midnight Indigo */
+    background-color: var(--secondary-accent);
+    transform: scale(1.05);
 }
-.why-ature, .share-chapter, .about-section, .featured-stories, .featured-recipes, .email-signup, .about-preview {
+
+.why-ature, .share-chapter, .about-section, .featured-stories, .featured-recipes, .tiktok-video {
     text-align: center;
-    padding: 2rem;
+    padding: 4rem 1rem;
+    animation: fadeIn 1s ease-in-out;
 }
-.why-ature h2, .share-chapter h2, .about-section h1, .featured-stories h2, .featured-recipes h2, .email-signup h2, .about-preview h2 {
-    font-family: 'Cormorant Garamond', serif;
-    color: #556B2F; /* Deep Bamboo Green */
+
+.why-ature h2, .share-chapter h2, .about-section h1, .featured-stories h2, .featured-recipes h2, .tiktok-video h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
 }
+
 .page-title {
     text-align: center;
-    padding: 2rem;
+    padding: 4rem 1rem;
 }
+
 .page-title h1 {
-    font-family: 'Cormorant Garamond', serif;
-    color: #556B2F; /* Deep Bamboo Green */
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--primary-color);
 }
+
+.page-title p {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.page-title img {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+
 .filters {
     text-align: center;
-    padding: 1rem;
+    padding: 2rem 1rem;
 }
+
 .filter-buttons {
     display: flex;
     justify-content: center;
     gap: 1rem;
     margin-bottom: 1rem;
+    flex-wrap: wrap;
 }
+
 .filter-buttons button {
-    padding: 0.5rem 1rem;
-    background-color: #D45D42; /* Heritage Terracotta */
-    color: #F3EDE2; /* Rice Paper Beige */
+    padding: 0.8rem 2rem;
+    background-color: var(--secondary-accent);
+    color: #FFF;
     border: none;
+    border-radius: 25px;
     cursor: pointer;
-    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
 .filter-buttons button:hover {
-    background-color: #2E2B5F; /* Midnight Indigo */
+    background-color: var(--accent-color);
+    transform: scale(1.05);
 }
+
 .story-grid, .recipe-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
+    gap: 2.5rem;
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
+
 .story-card, .recipe-card {
-    border: 1px solid #D45D42; /* Heritage Terracotta */
-    padding: 1rem;
+    background-color: #FFF;
+    border-radius: 20px;
+    padding: 2rem;
     text-align: center;
-    background-color: #FFFFFF; /* White for contrast */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: rotate(-2deg);
+    transition: transform 0.3s ease;
 }
+
+.story-card:hover, .recipe-card:hover {
+    transform: rotate(0deg) scale(1.05);
+}
+
+.story-card img, .recipe-card img {
+    width: 105%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin: -1.5rem 0 1rem -1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
 .story-card h3, .recipe-card h3 {
-    font-family: 'Cormorant Garamond', serif;
-    color: #556B2F; /* Deep Bamboo Green */
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
 }
+
+.story-card p, .recipe-card p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
 .story-card a, .recipe-card a {
-    display: inline-block;
-    margin-top: 0.5rem;
-    color: #D45D42; /* Heritage Terracotta */
+    color: var(--secondary-accent);
     text-decoration: none;
-    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    transition: color 0.3s ease;
 }
+
 .story-card a:hover, .recipe-card a:hover {
-    color: #2E2B5F; /* Midnight Indigo */
+    color: var(--accent-color);
 }
+
 .cta, .share-form {
     text-align: center;
-    padding: 2rem;
+    padding: 4rem 1rem;
 }
-.cta button, .cta-button, .cta-link {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    background-color: #D45D42; /* Heritage Terracotta */
-    color: #F3EDE2; /* Rice Paper Beige */
+
+.cta-button, .cta-link {
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
     border: none;
-    cursor: pointer;
+    border-radius: 30px;
     text-decoration: none;
     display: inline-block;
-    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
-.cta button:hover, .cta-button:hover, .cta-link:hover {
-    background-color: #2E2B5F; /* Midnight Indigo */
+
+.cta-button:hover, .cta-link:hover {
+    background-color: var(--secondary-accent);
+    transform: scale(1.05);
 }
+
 .social-share {
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
+
+.social-share p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.tiktok-video {
+    padding: 4rem 1rem;
+    background: linear-gradient(180deg, var(--background-color), var(--accent-color));
+}
+
+.tiktok-video h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.tiktok-video p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.tiktok-video .tiktok-embed {
+    margin: 0 auto;
+}
+
 footer {
     text-align: center;
-    padding: 1rem;
-    background-color: #556B2F; /* Deep Bamboo Green */
-    color: #F3EDE2; /* Rice Paper Beige */
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-accent));
+    color: #FFF;
 }
+
 .footer-nav a, .social-links a {
-    margin: 0 0.5rem;
-    color: #F3EDE2; /* Rice Paper Beige */
+    margin: 0 1rem;
+    color: #FFF;
     text-decoration: none;
-    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    transition: color 0.3s ease;
 }
+
 .footer-nav a:hover, .social-links a:hover {
-    color: #D45D42; /* Heritage Terracotta */
+    color: var(--accent-color);
 }
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    nav ul {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
-    .filter-buttons {
-        flex-direction: column;
+    .story-grid, .recipe-grid {
+        grid-template-columns: 1fr;
+    }
+    .story-card img, .recipe-card img {
+        width: 100%;
+        margin: 0;
     }
 }
